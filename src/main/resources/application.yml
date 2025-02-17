@@ -1,0 +1,7 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://db:5432/users_db  # Reference the db container by its service name
+    username: user
+    password: password
+  flyway:
+    enabled: true
