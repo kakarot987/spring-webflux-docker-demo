@@ -5,4 +5,8 @@ spring:
     password: password
   flyway:
     enabled: true
+    url: jdbc:postgresql://localhost:5432/users_db
+    username: user
+    password: password
     locations: classpath:db/migration
+    baseline-on-migrate: true
