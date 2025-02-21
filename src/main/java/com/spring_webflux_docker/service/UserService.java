@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.UUID;
+
 @Service
 public class UserService {
 
@@ -27,7 +29,7 @@ public class UserService {
 
     // Get User by ID
     public Mono<User> getUser(String id) {
-        return userRepository.findById(id);
+        return userRepository.findById(UUID.fromString(id));
     }
 
     // Get All Users
@@ -37,7 +39,7 @@ public class UserService {
 
     // Update User by ID
     public Mono<User> updateUser(String id, UserDto userDto) {
-        return userRepository.findById(id)
+        return userRepository.findById(UUID.fromString(id))
                 .flatMap(existingUser -> {
                     existingUser.setName(userDto.getName());
                     existingUser.setEmail(userDto.getEmail());
@@ -47,6 +49,6 @@ public class UserService {
 
     // Delete User by ID
     public Mono<Void> deleteUser(String id) {
-        return userRepository.deleteById(id);
+        return userRepository.deleteById(UUID.fromString(id));
     }
 }

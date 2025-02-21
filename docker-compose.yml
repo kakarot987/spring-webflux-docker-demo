@@ -34,7 +34,7 @@ services:
     networks:
       - app-network
     environment:
-      SPRING_R2DBC_URL: r2dbc:postgresql://db:5432/users_db
+      SPRING_R2DBC_URL: r2dbc:postgresql://host.docker.internal:5432/users_db
       SPRING_R2DBC_USERNAME: user
       SPRING_R2DBC_PASSWORD: password
 
