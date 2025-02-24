@@ -1,12 +1,12 @@
 spring:
   r2dbc:
-    url: r2dbc:postgresql://localhost:5432/users_db
-    username: user
-    password: password
+    url: r2dbc:postgresql://localhost:5432/userDb
+    username: postgres
+    password: root
   flyway:
     enabled: true
-    url: jdbc:postgresql://localhost:5432/users_db
-    username: user
-    password: password
+    url: jdbc:postgresql://localhost:5432/userDb
+    user: postgres
+    password: root
     locations: classpath:db/migration
     baseline-on-migrate: true

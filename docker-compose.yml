@@ -9,9 +9,9 @@ services:
     ports:
       - "8080:8080"
     environment:
-      SPRING_R2DBC_URL: r2dbc:postgresql://host.docker.internal:5432/users_db
-      SPRING_R2DBC_USERNAME: user
-      SPRING_R2DBC_PASSWORD: password
+      SPRING_R2DBC_URL: jdbc:postgresql://localhost:5432/postgres
+      SPRING_R2DBC_USERNAME: postgres
+      SPRING_R2DBC_PASSWORD: root
     networks:
       - app-network
 
