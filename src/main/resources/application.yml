@@ -1,11 +1,11 @@
 spring:
   r2dbc:
-    url: r2dbc:postgresql://db:5432/users_db  # Reference the db container by its service name
-    username: user
-    password: password
+    url: r2dbc:postgresql://db:5432/postgres     # Reference the db container by its service name
+    username: postgres
+    password: root
+  app:
+    database:
+      name: users_db
   flyway:
     enabled: true
-    url: jdbc:postgresql://localhost:5432/users_db
-    username: user
-    password: password
-    locations: classpath:db/migration
+

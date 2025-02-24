@@ -1,0 +1,12 @@
+spring:
+  profiles: local
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/users_db
+    username: postgres
+    password: root
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://localhost:5432/users_db
+    user: postgres
+    password: root
+    locations: classpath:db/migration

@@ -34,13 +34,6 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
-flyway{
-	url = "jdbc:postgresql://localhost:5432/users_db"
-	username = "user"
-	password = "password"
-	locations = ["classpath:db/migration"]
-}
-
 tasks.named('test') {
 	useJUnitPlatform()
 }
